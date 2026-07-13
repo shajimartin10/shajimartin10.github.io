@@ -140,19 +140,19 @@
   .work-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:16px; }
   .card{
     display:flex; flex-direction:column; gap:10px; text-decoration:none;
-    border-radius:var(--radius-xl); padding:26px; min-height:210px;
+    border-radius:var(--radius-xl); padding:26px; min-height:0;
     transition:transform .2s, box-shadow .2s, border-radius .25s, background var(--dur), color var(--dur);
   }
   .card:hover{ transform:translateY(-4px); box-shadow:var(--elev-3); border-radius:var(--radius-l); }
   .card .thumb{
-    width:calc(100% + 52px); margin:-26px -26px 4px; height:150px; object-fit:cover;
+    width:calc(100% + 52px); margin:-26px -26px 8px; height:240px; object-fit:cover;
     border-radius:var(--radius-xl) var(--radius-xl) 0 0; display:block;
     transition:border-radius .25s;
   }
   .card:hover .thumb{ border-radius:var(--radius-l) var(--radius-l) 0 0; }
   .card .kind{ font-family:var(--f-mono); font-size:.7rem; opacity:.8; }
-  .card h3{ font-size:1.18rem; font-weight:700; line-height:1.3; }
-  .card p{ font-size:.9rem; opacity:.85; flex:1; }
+  .card h3{ font-size:1.18rem; font-weight:700; line-height:1.3; flex:1; }
+  .card p{ font-size:.9rem; opacity:.85; flex:1; }  /* retained for non-gallery cards */
   .card .go{ font-weight:600; font-size:.86rem; }
   .c-primary{ background:var(--primary-container); color:var(--on-primary-container); }
   .c-secondary{ background:var(--secondary-container); color:var(--on-secondary-container); }
@@ -292,42 +292,36 @@
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/9e7214252348873.Y3JvcCwyNDgyLDE5NDEsMTk2LDU1.png" alt="Enterprise Sales Operations Dashboard — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">enterprise · dashboard UX</span>
         <h3>Enterprise Sales Operations Dashboard</h3>
-        <p>Information architecture, data-viz patterns, and role-based views that make a dense operational workflow feel calm.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-secondary reveal" href="https://www.behance.net/gallery/251737587/Design-System" target="_blank" rel="noopener">
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/d5cccd251737587.Y3JvcCwxMTU0LDkwMiwxNDIsNTk.png" alt="Design System — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">systems · components</span>
         <h3>Design System</h3>
-        <p>Tokenized color, type, and components for consistency across screens — and faster developer handoff.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-tertiary reveal" href="https://www.behance.net/gallery/225799935/Visionplus-Seeing-Beyond-Colors-for-Accessibility" target="_blank" rel="noopener">
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/19111d225799935.Y3JvcCwzMjc4LDI1NjQsMzY1LDIxOQ.png" alt="Visionplus — Seeing Beyond Colors — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">accessibility · inclusive design</span>
         <h3>Visionplus — Seeing Beyond Colors</h3>
-        <p>An accessibility-first concept for color-blind users, grounded in WCAG contrast and inclusive patterns.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-surface reveal" href="https://www.behance.net/gallery/198548149/Refab-Reinventing-Mobile-Interaction-with-Smart-UI" target="_blank" rel="noopener">
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/f8d631198548149.Y3JvcCwxNjAwLDEyNTEsMCw3.png" alt="Refab — Smart Mobile UI — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">mobile · interaction</span>
         <h3>Refab — Smart Mobile UI</h3>
-        <p>Rethinking mobile interaction patterns with an adaptive, gesture-aware interface prototype.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-secondary reveal" href="https://www.behance.net/gallery/226633831/Smart-Security-Clear-Insights" target="_blank" rel="noopener">
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/7a213d226633831.Y3JvcCwyMDQ1LDE2MDAsMzg0LDA.png" alt="Smart Security, Clear Insights — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">iot · analytics UI</span>
         <h3>Smart Security, Clear Insights</h3>
-        <p>Turning dense security data into glanceable, trustworthy insight for everyday users.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-primary reveal" href="https://www.behance.net/gallery/198537319/Tiny-Clothes-Big-Impact-Sustainable-Fashion-for-Kids" target="_blank" rel="noopener">
         <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/edf9b1198537319.Y3JvcCw0NTU2LDM1NjQsMTcwMyw4MzQ.jpg" alt="Tiny Clothes, Big Impact — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">e-commerce · brand UI</span>
         <h3>Tiny Clothes, Big Impact</h3>
-        <p>A warm, conversion-aware shopping experience for sustainable kids' fashion.</p>
         <span class="go">Read the case study →</span>
       </a>
     </div>
