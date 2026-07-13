@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Medolin Shajeena — UX/UI Designer</title>
 <meta name="description" content="Medolin Shajeena — UX/UI designer. Research to wireframes to polished, developer-ready UI. Portfolio, experience, contact.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://medolinshajeena.design/">
+<meta property="og:title" content="Medolin Shajeena — UX/UI Designer">
+<meta property="og:description" content="UX that thinks. UI that ships. Research to wireframes to polished, hand-coded UI — with a live dynamic-color design system.">
+<meta property="og:image" content="https://medolinshajeena.design/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Medolin Shajeena — UX/UI Designer">
+<meta name="twitter:description" content="UX that thinks. UI that ships. Portfolio, case studies, and a live design system.">
+<meta name="twitter:image" content="https://medolinshajeena.design/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700;8..144,800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,6 +23,17 @@
   /* ============ Material 3 token surface (values injected by theme engine) ============ */
   :root{
     --radius-xl:28px; --radius-l:20px; --radius-m:14px; --radius-full:999px;
+    /* Static fallback palette (lavender seed, light) — used only if JS is disabled;
+       the theme engine overrides all of these at runtime. */
+    --primary:hsl(258 44% 40%); --on-primary:hsl(258 44% 99%);
+    --primary-container:hsl(258 52% 90%); --on-primary-container:hsl(258 44% 14%);
+    --secondary-container:hsl(258 22% 88%); --on-secondary-container:hsl(258 22% 16%);
+    --tertiary-container:hsl(318 38% 86%); --on-tertiary-container:hsl(318 40% 14%);
+    --surface:hsl(258 10% 98%); --surface-container-low:hsl(258 12% 95%);
+    --surface-container:hsl(258 13% 93%); --surface-container-high:hsl(258 14% 90%);
+    --on-surface:hsl(258 10% 12%); --on-surface-variant:hsl(258 10% 32%);
+    --outline:hsl(258 10% 55%);
+    --elev-2:0 3px 8px hsl(0 0% 0% / .10); --elev-3:0 10px 26px hsl(0 0% 0% / .14);
     --f-body:'Roboto Flex',system-ui,sans-serif;
     --f-mono:'Roboto Mono',monospace;
     --dur:.35s;
@@ -122,6 +144,12 @@
     transition:transform .2s, box-shadow .2s, border-radius .25s, background var(--dur), color var(--dur);
   }
   .card:hover{ transform:translateY(-4px); box-shadow:var(--elev-3); border-radius:var(--radius-l); }
+  .card .thumb{
+    width:calc(100% + 52px); margin:-26px -26px 4px; height:150px; object-fit:cover;
+    border-radius:var(--radius-xl) var(--radius-xl) 0 0; display:block;
+    transition:border-radius .25s;
+  }
+  .card:hover .thumb{ border-radius:var(--radius-l) var(--radius-l) 0 0; }
   .card .kind{ font-family:var(--f-mono); font-size:.7rem; opacity:.8; }
   .card h3{ font-size:1.18rem; font-weight:700; line-height:1.3; }
   .card p{ font-size:.9rem; opacity:.85; flex:1; }
@@ -241,6 +269,7 @@
       <p class="hero-sub">I'm <b>Medolin Shajeena</b>, a UX/UI designer. I take interfaces from <b>research and wireframes</b> to <b>polished, high-fidelity UI</b> — then build them faithfully in <b>HTML, CSS, and JavaScript</b>, so nothing gets lost between the design file and the release.</p>
       <div class="cta-row">
         <a class="btn btn-filled" href="https://www.behance.net/medolinshajeena1218" target="_blank" rel="noopener">View portfolio on Behance</a>
+        <a class="btn btn-tonal" href="Medolin-Shajeena-Resume.pdf" download="Medolin-Shajeena-Resume.pdf">Download resume (PDF)</a>
         <a class="btn btn-tonal" href="mailto:shajimartin10@gmail.com">Email me</a>
       </div>
       <div class="hero-strip">
@@ -260,36 +289,42 @@
     <div class="sec-head reveal"><span class="badge">01 · portfolio</span><h2>Selected work</h2></div>
     <div class="work-grid">
       <a class="card c-primary reveal" href="https://www.behance.net/gallery/252348873/Enterprise-Sales-Operations-Dashboard-UX-Case-Study" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/9e7214252348873.Y3JvcCwyNDgyLDE5NDEsMTk2LDU1.png" alt="Enterprise Sales Operations Dashboard — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">enterprise · dashboard UX</span>
         <h3>Enterprise Sales Operations Dashboard</h3>
         <p>Information architecture, data-viz patterns, and role-based views that make a dense operational workflow feel calm.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-secondary reveal" href="https://www.behance.net/gallery/251737587/Design-System" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/d5cccd251737587.Y3JvcCwxMTU0LDkwMiwxNDIsNTk.png" alt="Design System — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">systems · components</span>
         <h3>Design System</h3>
         <p>Tokenized color, type, and components for consistency across screens — and faster developer handoff.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-tertiary reveal" href="https://www.behance.net/gallery/225799935/Visionplus-Seeing-Beyond-Colors-for-Accessibility" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/19111d225799935.Y3JvcCwzMjc4LDI1NjQsMzY1LDIxOQ.png" alt="Visionplus — Seeing Beyond Colors — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">accessibility · inclusive design</span>
         <h3>Visionplus — Seeing Beyond Colors</h3>
         <p>An accessibility-first concept for color-blind users, grounded in WCAG contrast and inclusive patterns.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-surface reveal" href="https://www.behance.net/gallery/198548149/Refab-Reinventing-Mobile-Interaction-with-Smart-UI" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/f8d631198548149.Y3JvcCwxNjAwLDEyNTEsMCw3.png" alt="Refab — Smart Mobile UI — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">mobile · interaction</span>
         <h3>Refab — Smart Mobile UI</h3>
         <p>Rethinking mobile interaction patterns with an adaptive, gesture-aware interface prototype.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-secondary reveal" href="https://www.behance.net/gallery/226633831/Smart-Security-Clear-Insights" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/7a213d226633831.Y3JvcCwyMDQ1LDE2MDAsMzg0LDA.png" alt="Smart Security, Clear Insights — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">iot · analytics UI</span>
         <h3>Smart Security, Clear Insights</h3>
         <p>Turning dense security data into glanceable, trustworthy insight for everyday users.</p>
         <span class="go">Read the case study →</span>
       </a>
       <a class="card c-primary reveal" href="https://www.behance.net/gallery/198537319/Tiny-Clothes-Big-Impact-Sustainable-Fashion-for-Kids" target="_blank" rel="noopener">
+        <img class="thumb" src="https://mir-s3-cdn-cf.behance.net/projects/404/edf9b1198537319.Y3JvcCw0NTU2LDM1NjQsMTcwMyw4MzQ.jpg" alt="Tiny Clothes, Big Impact — case study cover" loading="lazy" onerror="this.style.display='none'">
         <span class="kind">e-commerce · brand UI</span>
         <h3>Tiny Clothes, Big Impact</h3>
         <p>A warm, conversion-aware shopping experience for sustainable kids' fashion.</p>
@@ -433,8 +468,9 @@
         <a href="mailto:shajimartin10@gmail.com">shajimartin10@gmail.com</a>
         <a href="https://www.behance.net/medolinshajeena1218" target="_blank" rel="noopener">Behance ↗</a>
         <a href="https://www.linkedin.com/in/medolin-shajeena-b97321108" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://github.com/shajimartin10" target="_blank" rel="noopener">GitHub ↗</a>
       </div>
-      <p class="foot-note">Designed &amp; hand-coded by Medolin Shajeena — dynamic color, tonal surfaces, and components generated live from a single seed &mdash; every palette runtime-verified against WCAG AA contrast.</p>
+      <p class="foot-note">Designed in Figma and hand-coded by Medolin Shajeena in vanilla HTML/CSS/JS &mdash; no frameworks, by choice, to show the fundamentals. Dynamic color and tonal surfaces are generated live from a single seed, and every palette is runtime-verified against WCAG AA contrast.</p>
     </div>
   </div>
 </footer>
@@ -448,18 +484,23 @@ let dark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const T = (h,s,l)=>`hsl(${h} ${s}% ${l}%)`;
 
 /* WCAG contrast guard: every generated palette is verified >= 4.5:1 */
+/* WCAG 2.x relative luminance: linearize each sRGB channel, then weight
+   by human eye sensitivity (green counts most, blue least). */
 function relLum(h,sat,l){
   const [r,g,b] = hslToRgb(h,sat,l).map(c=>{
     c/=255; return c<=0.03928 ? c/12.92 : Math.pow((c+0.055)/1.055, 2.4);
   });
   return 0.2126*r + 0.7152*g + 0.0722*b;
 }
+/* Standard HSL->RGB conversion (CSS Color 4 algorithm).
+   k(n) walks the hue wheel in 30-degree steps; f(n) computes each RGB channel. */
 function hslToRgb(h,sat,l){
   sat/=100; l/=100;
   const k=n=>(n+h/30)%12, a=sat*Math.min(l,1-l);
   const f=n=>l-a*Math.max(-1,Math.min(k(n)-3,Math.min(9-k(n),1)));
   return [f(0),f(8),f(4)].map(x=>Math.round(x*255));
 }
+/* WCAG contrast ratio: (lighter + 0.05) / (darker + 0.05). AA requires >= 4.5:1 for body text. */
 function contrast(c1,c2){
   const l1=relLum(...c1), l2=relLum(...c2);
   return (Math.max(l1,l2)+0.05)/(Math.min(l1,l2)+0.05);
