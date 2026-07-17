@@ -41,6 +41,15 @@
   }
   *{ box-sizing:border-box; margin:0; padding:0; }
   html{ scroll-behavior:smooth; }
+  @media(max-width:768px){
+
+section{
+
+padding:72px 0;
+
+}
+
+}
   @media (prefers-reduced-motion:reduce){
     html{ scroll-behavior:auto; }
     *,*::before,*::after{ animation:none!important; transition:none!important; }
@@ -52,7 +61,7 @@
   a{ color:var(--primary); }
   :focus-visible{ outline:3px solid var(--primary); outline-offset:3px; border-radius:8px; }
   .wrap{ max-width:1200px; margin:0 auto; padding:0 20px; }
-  section{ padding:72px 0; }
+  section{ padding:110px 0; }
 
 
   .skip-link{
@@ -63,7 +72,20 @@
   .skip-link:focus{ top:12px; }
 
   /* ============ top app bar ============ */
-  .appbar{ position:sticky; top:0; z-index:60; padding:12px 0; background:color-mix(in srgb, var(--surface) 82%, transparent); backdrop-filter:blur(14px); }
+  .appbar{ position:sticky;
+
+top:0;
+
+backdrop-filter:blur(24px);
+
+background:
+
+rgba(255,255,255,.82);
+
+border-bottom:
+
+1px solid rgba(0,0,0,.05);
+ }
   .appbar-in{ display:flex; align-items:center; gap:12px; max-width:1200px; margin:0 auto; padding:0 20px; }
   .monogram{
     width:42px; height:42px; border-radius:14px; display:grid; place-items:center;
@@ -97,7 +119,7 @@
   .hero-card{
     position:relative; overflow:hidden; background:var(--primary-container); color:var(--on-primary-container);
     border-radius:var(--radius-xl); padding:clamp(36px,6vw,72px);
-    transition:background var(--dur), color var(--dur);
+    transition:background var(--dur), color var(--dur);box-shadow:0 35px 80px rgba(50,40,80,.08);
   }
   .cookie{ position:absolute; right:-70px; top:50%; translate:0 -50%; width:min(380px,46vw); opacity:.9; }
   .cookie svg{ width:100%; height:auto; display:block; animation:spin 60s linear infinite; }
@@ -109,8 +131,11 @@
   }
   .eyebrow .dot{ width:8px; height:8px; border-radius:50%; background:var(--primary); }
   h1{
-    font-size:clamp(2.3rem,5.6vw,4rem); line-height:1.05; letter-spacing:-.02em; font-weight:800;
-    max-width:14ch;
+    font-size:clamp(2.8rem,6vw,4.8rem);
+    line-height:1;
+    letter-spacing:-.03em;
+    font-weight:800;
+    max-width:13ch;
   }
   .hero-sub{ margin-top:20px; max-width:52ch; font-size:1.06rem; opacity:.92; position:relative; z-index:2; }
   .hero-sub b{ font-weight:600; }
@@ -119,7 +144,14 @@
     text-decoration:none; font-weight:600; font-size:.95rem; padding:14px 26px; border-radius:var(--radius-full);
     transition:box-shadow .2s, transform .15s, background var(--dur), color var(--dur);
   }
-  .btn:hover{ transform:translateY(-1px); box-shadow:var(--elev-2); }
+  .btn:hover{ transform:
+
+          translateY(-3px);
+
+           box-shadow:
+
+         0 16px 32px rgba(0,0,0,.12);
+ }
   .btn-filled{ background:var(--primary); color:var(--on-primary); }
   .btn-tonal{ background:var(--surface); color:var(--primary); }
   .hero-strip{ display:flex; gap:10px; flex-wrap:wrap; margin-top:26px; position:relative; z-index:2; }
@@ -144,12 +176,13 @@
     border-radius:var(--radius-xl); padding:26px; min-height:0;
     transition:transform .2s, box-shadow .2s, border-radius .25s, background var(--dur), color var(--dur);
   }
-  .card:hover{ transform:translateY(-4px); box-shadow:var(--elev-3); border-radius:var(--radius-l); }
-  .card .thumb{
-    width:calc(100% + 52px); margin:-26px -26px 8px; height:240px; object-fit:cover;
-    border-radius:var(--radius-xl) var(--radius-xl) 0 0; display:block;
-    transition:border-radius .25s;
-  }
+  .card{transition:transform .35s ease,box-shadow .35s ease;overflow: hidden;}
+  .card:hover{transform:translateY(-10px);box-shadow:0 28px 55px rgba(20,20,40,.18);}
+  .card .thumb{width:calc(100% + 52px); margin:-26px -26px 8px; height:240px; object-fit:cover;
+               border-radius:var(--radius-xl) var(--radius-xl) 0 0; display:block;
+               transition:transform .5s ease,filter .4s ease,border-radius .25s;}
+  .card:hover .thumb{transform:scale(1.05);filter:brightness(1.02)contrast(1.05);}
+  
   .card:hover .thumb{ border-radius:var(--radius-l) var(--radius-l) 0 0; }
   .card .kind{ font-family:var(--f-mono); font-size:.7rem; opacity:.8; }
   .card h3{ font-size:1.18rem; font-weight:700; line-height:1.3; flex:1; }
@@ -227,8 +260,8 @@
   .m-chip.phase{ cursor:pointer; background:transparent; font-family:var(--f-body); }
   @media(max-width:640px){ .ai-split{ grid-template-columns:1fr; } }
 
-  .reveal{ opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease; }
-  .reveal.in{ opacity:1; transform:none; }
+  .reveal{ opacity:0; transform:translateY(40px);scale(.98);; transition:opacity .5s ease, transform .5s ease; }
+  .reveal.in{ opacity:1;transform:translateY(0)scale(1);}
   @media (prefers-reduced-motion:reduce){ .reveal{ opacity:1; transform:none; } }
 </style>
 </head>
@@ -266,7 +299,7 @@
         </svg>
       </div>
       <span class="eyebrow"><span class="dot"></span>Phoenix, AZ · open to full-time &amp; freelance</span>
-      <h1>UX that thinks.<br>UI that ships.</h1>
+      <h1>Designing enterprise products.<br>where humans and AI work together.</h1>
       <p class="hero-sub">I'm <b>Medolin Shajeena</b>, a UX/UI designer. I take interfaces from <b>research and wireframes</b> to <b>polished, high-fidelity UI</b> — then build them faithfully in <b>HTML, CSS, and JavaScript</b>, so nothing gets lost between the design file and the release.</p>
       <div class="cta-row">
         <a class="btn btn-filled" href="https://www.behance.net/medolinshajeena1218" target="_blank" rel="noopener">View portfolio on Behance</a>
